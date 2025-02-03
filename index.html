@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-br"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Calculadora de Taxas Bancárias&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container { max-width: 600px; margin: 50px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>h1 { text-align: center; color: #333; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.input-field { margin-bottom: 15px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>label { display: block; font-weight: bold; color: #333; margin-bottom: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="number"], select { width: 100%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button { width: 100%; padding: 10px 0; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:hover { background-color: #45a049; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result { margin-top: 20px; padding: 15px; background-color: #f1f1f1; border-radius: 5px; border: 1px solid #ddd; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.result p { margin: 10px 0; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Calculadora de Taxas Bancárias&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="bank"&gt;Selecione o Banco:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="bank"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="banco1"&gt;Banco 1&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="banco2"&gt;Banco 2&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="banco3"&gt;Banco 3&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="monthly_fee"&gt;Mensalidade (R$):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="monthly_fee" placeholder="Digite o valor da mensalidade" min="0" step="0.01"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="pix_value"&gt;Valor do PIX (R$):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="pix_value" placeholder="Digite o valor do PIX" min="0" step="0.01"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="ted_value"&gt;Valor do TED (R$):&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="ted_value" placeholder="Digite o valor do TED" min="0" step="0.01"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="pix_count"&gt;Quantidade de PIX Mensal:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="pix_count" placeholder="Digite a quantidade de PIX" min="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="input-field"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="ted_count"&gt;Quantidade de TED Mensal:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="number" id="ted_count" placeholder="Digite a quantidade de TED" min="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="calcularTaxas()"&gt;Calcular&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="result" id="result"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>function calcularTaxas() {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const banco = document.getElementById('bank').value;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const mensalidade = parseFloat(document.getElementById('monthly_fee').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const valorPIX = parseFloat(document.getElementById('pix_value').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const valorTED = parseFloat(document.getElementById('ted_value').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const qtdPIX = parseInt(document.getElementById('pix_count').value);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const qtdTED = parseInt(document.getElementById('ted_count').value);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (isNaN(mensalidade) || isNaN(valorPIX) || isNaN(valorTED) || isNaN(qtdPIX) || isNaN(qtdTED)) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert("Por favor, preencha todos os campos.");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let totalPIX = valorPIX * qtdPIX;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let totalTED = valorTED * qtdTED;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let custoTotal = mensalidade + totalPIX + totalTED;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let taxaBanco = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Aqui você pode definir as taxas específicas para cada banco</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (banco === "banco1") {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>taxaBanco = 10; // Exemplo de taxa do Banco 1</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else if (banco === "banco2") {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>taxaBanco = 15; // Exemplo de taxa do Banco 2</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else if (banco === "banco3") {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>taxaBanco = 20; // Exemplo de taxa do Banco 3</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>let custoComTaxa = custoTotal + taxaBanco;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('result').innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Resultado:&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Banco:&lt;/strong&gt; ${banco.charAt(0).toUpperCase() + banco.slice(1)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Mensalidade:&lt;/strong&gt; R$ ${mensalidade.toFixed(2)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Total de PIX (R$):&lt;/strong&gt; R$ ${totalPIX.toFixed(2)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Total de TED (R$):&lt;/strong&gt; R$ ${totalTED.toFixed(2)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Custo Total (R$):&lt;/strong&gt; R$ ${custoTotal.toFixed(2)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Taxa do Banco (R$):&lt;/strong&gt; R$ ${taxaBanco.toFixed(2)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;&lt;strong&gt;Custo Total com Taxa (R$):&lt;/strong&gt; R$ ${custoComTaxa.toFixed(2)}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
